@@ -7,7 +7,7 @@
 
 # Disclaimer
 - Schema is not optimised as I had no time to test performance.
-- Data imported is in full size for part test-question-option, while schema part for taken exams contains a single entry that allowed me to test basic functioning of the solution.
+- Data inserted is in full-testing-size for schema part that covers test-question-option, while schema part for exams-answers contains a single entry that allowed me to just test basic functioning of the solution.
 
 # Architectural decisions
 - I'm generally strongly against pushing any kind of business logic and data processing on the database side, and in favor of using it just as a storage. In this case I used that approach to solve issue with similar email. The app would due the "cleanup" of email address and then store it in the additional column. This way queries that need to find similar emails are simple "equal" comparison and thus quite fast.
