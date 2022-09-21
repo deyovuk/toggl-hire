@@ -21,7 +21,7 @@ join exams e on c.id=e.id
 where e.fraud_events > 1
 
 
--- Select candidates based on job they applied for aminimal score
+-- Select candidates based on job they applied for and minimal score
 
 select * from candidates c
 join exams e on c.id=e.id
